@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style/form-style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navigation Bar -->
+      <div class="logo">Jaka Health App</div>
+      <nav>
+        <div class="nav_items">
+          <a href="index.html" class="nav_link">Home</a>
+          <a href="form-page.html" class="nav_link">Health Form</a>
+          <a href="login-page.html" class="nav_link">Login</a>
+          <a href="register-page.html" class="nav_link">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div class="form_title">
+        <h1>Register</h1>
+        <p>Fill out the form below to create your account</p>
+      </div>
+      <form
+        action="dbregister.php"
+        method="post"
+        id="contact-form"
+        class="forms"
+      >
+        <div>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="First Name"
+            class="text_input"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            placeholder="Last Name"
+            class="text_input"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            class="text_input"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+            class="text_input"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            class="text_input"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            class="text_input"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="cassword"
+            name="cpassword"
+            id="cpassword"
+            placeholder="Confirm Password"
+            class="text_input"
+            required
+          />
+        </div>
+        <div class="nav-log">
+          <a href="login-page.html" class="nav_link">Don't have an account?</a>
+        </div>
+        <div class="button_group">
+          <button type="submit" onclick="return validate()" class="button">
+            Create Account
+          </button>
+        </div>
+      </form>
+    </section>
+    <script defer src="scripts/register-script.js"></script>
+  </body>
+
+  <!-- Footer -->
+  <footer>
+    <div class="contact_info">
+      <h1>Contact Us</h1>
+      <p>📩 gmahkjakasampurna@outlook.com</p>
+      <p>☎ +62 877-2071-2535</p>
+    </div>
+    <div class="copyright">
+      <p>© 1986-2024 GMAHK Jakasampurna. All Rights Reserved.</p>
+    </div>
+  </footer>
+</html>

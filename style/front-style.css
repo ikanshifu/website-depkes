@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background:  #FFFFFF;
+    text-align: center;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav{
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #004225;
+    padding: 23px;
+}
+
+nav a:hover{
+    color: #FFB000;
+}
+
+.logo{
+    color: #004225;
+    font-size: 42px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Content */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container_title{
+    margin-top: 30px;
+    justify-content: center;
+    object-position: center;
+}
+
+.container_title h1{
+    font-size: 64px;
+    color: #004225;
+}
+
+.section{
+    padding: 20px 0;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner_container{
+    padding: 30px;
+    border: 2px#004225;
+    border-style: solid;
+    justify-content: center;
+    align-items: center;
+    color: #004225;
+}
+
+.banner_container h1{
+    margin-top: 20px;
+    font-size: 64px;
+    align-self: stretch;
+    text-align: center;
+}
+
+.banner_container p{
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.card {
+    width: 300px;
+    margin: 10px;
+    border: 2px solid #004225;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .title {
+    background-color: #004225;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 5px 0;
+    position: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.button_group {
+    display: flex;
+    object-position: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.button_group button {
+    background-color: #FFFFFF;
+    color: #004225;
+    padding: 10px 20px;
+    border: 2px solid #004225;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #FFFFFF;
+    color: #004225;
+    padding: 10px 20px;
+    border: 2px solid #004225;
+    margin: 0 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button_group button.active {
+    background-color: #004225;
+    color: #FFFFFF;
+}
+
+.button:hover{
+    background:#004225;
+    color: #FFFFFF;
+    border: 2px solid #004225;
+}
+
+.quote_image{
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 50%;
+    flex-flow: 1;
+}
+
+/* Footer */
+footer{
+    margin-top: 30px;
+    background-color: #004225;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright{
+    font-size: large;
+    padding: 15px;
+}
+
+.contact_info{
+    padding: 15px;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px){
+    .banner_container{
+        grid-template-columns: 1fr;
+    }
+}
