@@ -11,35 +11,51 @@ body{
 
 /* Header */
 header {
-    background-color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
+    background-color: #03346E;
+    margin-bottom: 40px;
+    padding: 15px;
 }
 
 /* Navigation Bar */
 nav{
-    height: 80px;
-    background-color: #FFFFFF;
+    height: auto;
+    background-color: #03346E;
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
 }
 
 nav a{
     text-decoration: none;
-    color: #004225;
-    padding: 23px;
+    margin-left: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 nav a:hover{
-    color: #FFB000;
+   color: #0093D5;
+}
+
+.nav_items{
+    justify-content: center;
+    align-self: center;
 }
 
 .logo{
-    color: #004225;
-    font-size: 42px;
+    font-size: 24px;
+    display: flex;
+    justify-content: left;
+    color: white;
     font-weight: bold;
-    padding-top: 10px;
+}
+
+.logo img{
+    width: 100px;
+    height:100px;
+}
+
+.logo p{
+    align-self: center;
 }
 
 /* Content */
@@ -60,7 +76,7 @@ nav a:hover{
 
 .container_title h1{
     font-size: 64px;
-    color: #004225;
+    color: #03346E;
 }
 
 .section{
@@ -74,11 +90,11 @@ nav a:hover{
 
 .banner_container{
     padding: 30px;
-    border: 2px#004225;
+    border: 2px#03346E;
     border-style: solid;
     justify-content: center;
     align-items: center;
-    color: #004225;
+    color: #03346E;
 }
 
 .banner_container h1{
@@ -97,7 +113,7 @@ nav a:hover{
 .card {
     width: 300px;
     margin: 10px;
-    border: 2px solid #004225;
+    border: 2px solid #03346E;
     padding: 10px;
     position: relative;
     overflow: hidden;
@@ -109,50 +125,13 @@ nav a:hover{
 }
 
 .card .title {
-    background-color: #004225;
+    background-color: #03346E;
     color: #FFFFFF;
     font-size: 18px;
     padding: 5px 0;
     position: center;
     bottom: 0;
     width: 100%;
-}
-
-.button_group {
-    display: flex;
-    object-position: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-
-.button_group button {
-    background-color: #FFFFFF;
-    color: #004225;
-    padding: 10px 20px;
-    border: 2px solid #004225;
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.button {
-    background-color: #FFFFFF;
-    color: #004225;
-    padding: 10px 20px;
-    border: 2px solid #004225;
-    margin: 0 10px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.button_group button.active {
-    background-color: #004225;
-    color: #FFFFFF;
-}
-
-.button:hover{
-    background:#004225;
-    color: #FFFFFF;
-    border: 2px solid #004225;
 }
 
 .quote_image{
@@ -166,7 +145,7 @@ nav a:hover{
 /* Footer */
 footer{
     margin-top: 30px;
-    background-color: #004225;
+    background-color: #03346E;
     color: #FFFFFF;
     display: flex;
     justify-content: space-between;

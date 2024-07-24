@@ -13,42 +13,58 @@ body{
 
 /* Header */
 header {
-    background-color: #FFFFFF;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #03346E;
+    margin-bottom: 40px;
+    padding: 15px;
 }
 
 /* Navigation Bar */
 nav{
-    height: 80px;
-    background-color: #FFFFFF;
+    height: auto;
+    background-color: #03346E;
     display: flex;
-    justify-content: center;
-    padding: 18px;
-}
-
-.logo{
-    color: #004225;
-    font-size: 42px;
-    font-weight: bold;
-    padding-top: 10px;
+    justify-content: space-between;
 }
 
 nav a{
     text-decoration: none;
-    color: #004225;
-    padding: 23px;
+    margin-left: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 nav a:hover{
-    color: #FFB000;
+   color: #0093D5;
+}
+
+.nav_items{
+    justify-content: center;
+    align-self: center;
+}
+
+.logo{
+    font-size: 24px;
+    display: flex;
+    justify-content: left;
+    color: white;
+    font-weight: bold;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.logo p{
+    align-self: center;
 }
 
 /* Content */
 .form_title{
     object-position: center;
     justify-content: center;
-    color: #004225;
+    color: #03346E;
     padding: 0rem 2rem;
 }
 
@@ -88,37 +104,19 @@ nav a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #004225;
-    padding: 0rem 2rem;
+    color: #03346E;
+    
 }
 
 .text_input{
     width: 500px;
     height: 80px;
     padding: 8px;
-    border: 2px solid #004225;
+    border: 2px solid #03346E;
     border-radius: 2px;
+    margin: 8px;
     font-size: 16px;
     background-color: #FFFFFF;
-}
-
-.send_message{
-    padding: 8px 41px 13px;
-    font-size: 16px;
-    margin-top: 40px;
-    border: 2px#004225;
-    border-style: solid;
-    color: #FFFFFF;
-    background: #004225;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-    text-decoration: none;
-}
-
-.send_message:hover{
-    background-color: #FFFFFF;
-    color: #004225;
 }
 
 .button_group {
@@ -131,18 +129,16 @@ nav a:hover{
 }
 
 .button_group button {
-    background:#004225;
+    background:#03346E;
     color: #FFFFFF;
     padding: 10px 20px;
-    border: 2px solid #004225;
     margin: 0 10px;
     cursor: pointer;
 }
 
 .button:hover{
-    background-color: #FFFFFF;
-    color: #004225;
-    border: 2px solid #004225;
+    background-color: #0093D5;
+    color: #FFFFFF;
 }
 
 textarea{
@@ -150,13 +146,10 @@ textarea{
     height: 100px;
 }
 
-.nav-log{
-    text-align: end;
-}
-
 /* Footer */
 footer{
-    background-color: #004225;
+    margin-top: 30px;
+    background-color: #03346E;
     color: #FFFFFF;
     display: flex;
     justify-content: space-between;
@@ -172,7 +165,6 @@ footer{
     padding: 15px;
     text-align: left;
 }
-
 @media screen and (max-width: 768px){
     .banner_container{
         grid-template-columns: 1fr;
