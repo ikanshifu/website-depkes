@@ -146,6 +146,10 @@ textarea{
     height: 100px;
 }
 
+.nav-log a:hover{
+    color: #fdb827;
+}
+
 /* Footer */
 footer{
     margin-top: 30px;
