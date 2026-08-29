@@ -1,73 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style/form-style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <!-- Navigation Bar -->
-      <nav>
-        <div class="logo">
-          <img src="Assets/Logo Jaka.png" alt="" />
-          <p>Jakasampurna Health Department</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JakaHealth - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#052349',
+              light: '#65c4cd',
+              blue: '#0b396b',
+              bg: '#f4f7fb',
+              gray: '#8a94a6',
+              green: '#22c55e',
+              red: '#ef4444'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-brand-bg font-sans text-gray-800 antialiased flex flex-col min-h-screen">
+  
+  <!-- Header Area -->
+  <div class="relative pt-6 pb-20">
+    <!-- Top Nav Pill -->
+    <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-20">
+      <nav class="bg-white rounded-full px-6 py-3 flex items-center justify-between shadow-lg border border-gray-100">
+        <div class="flex items-center space-x-2">
+          <img src="Assets/Logo Jaka.png" alt="Logo" class="h-8">
         </div>
-        <div class="nav_items">
-          <a href="register-page.html" class="nav_link">Register</a>
+        <div class="flex items-center space-x-8 font-medium text-sm text-gray-700">
+          <a href="index.html" class="hover:text-brand-blue transition" data-i18n="nav_home">Home</a>
+          <a href="form-page.html" class="hover:text-brand-blue transition" data-i18n="nav_health_form">Health Form</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="relative flex items-center bg-gray-100 rounded-full p-1 text-xs font-semibold w-20">
+            <div class="lang-slider absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] bg-brand-blue rounded-full shadow-sm transition-transform duration-300 ease-out z-0"></div>
+            <span class="lang-btn relative z-10 w-1/2 text-center py-1 cursor-pointer transition-colors duration-300" data-lang="en">EN</span>
+            <span class="lang-btn relative z-10 w-1/2 text-center py-1 cursor-pointer transition-colors duration-300 hover:text-gray-700" data-lang="id">ID</span>
+          </div>
+          <a href="login-page.html" class="text-black font-semibold" data-i18n="nav_sign_in">Sign in</a>
+          <a href="register-page.html" class="bg-brand-blue text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-800 transition shadow-sm" data-i18n="nav_register">Register</a>
         </div>
       </nav>
-    </header>
+    </div>
+  </div>
 
-    <section class="content">
-      <div class="form_title">
-        <h1>Login</h1>
-      </div>
-      <form action="dblogin.php" method="post" id="contact-form" class="forms">
-        <div>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-            class="text_input"
-            required
-          />
+  <!-- Form Section -->
+  <main class="flex-grow max-w-lg mx-auto w-full px-4 mb-20 relative z-10 flex flex-col justify-center">
+    
+    <div class="bg-white rounded-[2rem] shadow-xl border border-gray-100 p-10 md:p-12 relative overflow-hidden text-center">
+      
+      
+      <h1 class="text-3xl font-bold text-gray-900 mb-2" data-i18n="login_title">Welcome Back</h1>
+      <p class="text-gray-500 mb-8" data-i18n="login_desc">Please login to your account</p>
+
+      <form action="dblogin.php" method="post" id="contact-form" class="relative z-10 text-left">
+        <div class="space-y-6 mb-8">
+          
+          <!-- Username -->
+          <div>
+            <label for="username" class="block text-sm font-bold text-brand-blue mb-2 uppercase tracking-wide" data-i18n="login_user_lbl">Username</label>
+            <input type="text" name="username" id="username" data-i18n="login_user_ph" placeholder="Enter your username" class="w-full bg-gray-50 border border-gray-100 text-gray-700 rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition" required>
+          </div>
+
+          <!-- Password -->
+          <div>
+            <label for="password" class="block text-sm font-bold text-brand-blue mb-2 uppercase tracking-wide" data-i18n="login_pass_lbl">Password</label>
+            <input type="password" name="password" id="password" data-i18n="login_pass_ph" placeholder="Enter your password" class="w-full bg-gray-50 border border-gray-100 text-gray-700 rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition" required>
+          </div>
         </div>
-        <div>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-            class="text_input"
-            required
-          />
-        </div>
-        <div class="nav-log">
-          <a href="register-page.html">Already have an account?</a>
-        </div>
-        <div class="button_group">
-          <button type="submit" onclick="return validate()" class="button">
-            Login
-          </button>
+
+        <button type="submit" onclick="if(typeof validate === 'function'){return validate();}else{return true;}" class="bg-brand-blue hover:bg-blue-900 text-white font-medium py-4 px-8 rounded-xl transition shadow-lg w-full mb-6">
+          <span data-i18n="login_btn">Login</span>
+        </button>
+
+        <div class="text-center text-sm font-medium">
+          <span class="text-gray-500" data-i18n="login_no_acc">Don't have an account?</span>
+          <a href="register-page.html" class="text-brand-light hover:text-brand-blue transition ml-1" data-i18n="login_reg_link">Register here</a>
         </div>
       </form>
-    </section>
-    <script defer src="scripts/login-script.js"></script>
-  </body>
+    </div>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="contact_info">
-      <h1>Contact Us</h1>
-      <p>📩 gmahkjakasampurna@outlook.com</p>
-      <p>☎ +62 877-2071-2535</p>
+  <footer class="bg-brand-dark text-white pt-16 pb-8 mt-auto relative z-20">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="col-span-1 md:col-span-1 flex items-start gap-3">
+        <img src="Assets/Logo Jaka.png" alt="Logo" class="h-10 brightness-0 invert opacity-90">
+        <span class="text-xl font-bold tracking-wide mt-1">JakaHealth</span>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-400" data-i18n="footer_company">Company</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_about_us">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_careers">Careers</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_press">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-400" data-i18n="footer_resources">Resources</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_documentation">Documentation</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_help_center">Help Center</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_community">Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-400" data-i18n="footer_legal">Legal</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_privacy_policy">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_terms_of_service">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="footer_cookie_policy">Cookie Policy</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="copyright">
-      <p>© 1986-2024 GMAHK Jakasampurna. All Rights Reserved.</p>
+    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-white/10 text-xs text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p data-i18n="footer_copyright">© 1986-<span class="current-year">2024</span> GMAHK Jakasampurna. All Rights Reserved.</p>
+      <div class="flex items-center gap-4">
+        <span>gmahkjakasampurna@outlook.com</span>
+        <span>+62 851-7784-2491</span>
+      </div>
     </div>
   </footer>
+  <script defer src="scripts/login-script.js"></script>
+  <script defer src="scripts/translations.js"></script>
+</body>
 </html>

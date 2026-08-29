@@ -1,0 +1,285 @@
+const currentYear = new Date().getFullYear();
+
+const translations = {
+  en: {
+    nav_home: "Home",
+    nav_health_form: "Health Form",
+    nav_sign_in: "Sign in",
+    nav_login: "Login",
+    nav_register: "Register",
+    
+    hero_title_1: "Book health and",
+    hero_title_2: "emergency",
+    hero_title_3: "services now.",
+    hero_desc: "Access integrated health services, schedule appointments, and get emergency assistance quickly and easily directly from your device through the Jakasampurna Health Department digital platform.",
+    hero_card_1: "INTEGRATED SERVICES",
+    hero_card_2: "SCHEDULE APPOINTMENT",
+    hero_card_3: "EMERGENCY ASSISTANCE",
+    hero_card_sub: "Your Health, Simplified.",
+    
+    welcome_title: "Welcome back, Shann Nainggolan.",
+    welcome_desc: "Here's the latest update on your monitored patients.",
+    
+    stat_weight: "Weight",
+    stat_height: "Height",
+    stat_bp: "Blood Pressure",
+    stat_bs: "Blood Sugar",
+    stat_chol: "Cholesterol",
+    stat_uric: "Uric Acid",
+    stat_stable: "– Stable",
+    stat_last_measured: "Last measured: Oct 2023",
+    
+    appt_title: "Appointments",
+    appt_view_all: "View All",
+    
+    lab_title: "Recent Lab Results",
+    lab_filter: "Filter",
+    lab_th_test: "Test Name",
+    lab_th_date: "Date",
+    lab_th_result: "Result",
+    lab_th_status: "Status",
+    lab_status_stable: "Stable",
+    lab_status_monitor: "Monitor",
+    
+    form_weight_lbl: "Weight",
+    form_height_lbl: "Height",
+    form_bp_lbl: "Blood Pressure",
+    form_bs_lbl: "Blood Sugar",
+    form_chol_lbl: "Cholesterol",
+    form_uric_lbl: "Gout (Uric Acid)",
+    form_submit: "Submit",
+    appt_1: "Cardiology Review • 10:00 AM",
+    appt_2: "General Checkup • 2:30 PM",
+    lab_test_1: "Lipid Panel",
+    lab_test_2: "Complete Blood Count",
+    lab_test_3: "Metabolic Panel",
+    lab_date_1: "Oct 20, 2023",
+    lab_date_2: "Oct 18, 2023",
+    lab_date_3: "Oct 15, 2023",
+    lab_res_normal: "Normal",
+    lab_res_elevated: "Slightly Elevated WBC",
+    stat_trend_bs: "4%",
+    stat_trend_chol: "2%",
+    stat_trend_uric: "8%",
+
+    
+    login_title: "Welcome Back",
+    login_desc: "Please login to your account",
+    login_user_lbl: "Username",
+    login_pass_lbl: "Password",
+    login_btn: "Login",
+    login_no_acc: "Don't have an account?",
+    login_reg_link: "Register here",
+    
+    reg_title: "Create an Account",
+    reg_desc: "Fill out the form below to register to JakaHealth",
+    reg_fname_lbl: "First Name",
+    reg_lname_lbl: "Last Name",
+    reg_email_lbl: "Email Address",
+    reg_phone_lbl: "Phone Number",
+    reg_user_lbl: "Username",
+    reg_pass_lbl: "Password",
+    reg_cpass_lbl: "Confirm Password",
+    reg_btn: "Create Account",
+    reg_has_acc: "Already have an account?",
+    reg_log_link: "Login here",
+    
+    footer_company: "Company",
+    footer_about_us: "About Us",
+    footer_careers: "Careers",
+    footer_press: "Press",
+    footer_resources: "Resources",
+    footer_documentation: "Documentation",
+    footer_help_center: "Help Center",
+    footer_community: "Community",
+    footer_legal: "Legal",
+    footer_privacy_policy: "Privacy Policy",
+    footer_terms_of_service: "Terms of Service",
+    footer_cookie_policy: "Cookie Policy",
+    footer_copyright: `© 1986-${currentYear} GMAHK Jakasampurna. All Rights Reserved.`,
+    form_weight_ph: "e.g 75",
+    form_height_ph: "e.g 180",
+    form_bp_sys_ph: "Systolic (e.g 120)",
+    form_bp_dia_ph: "Diastolic (e.g 80)",
+    form_bs_ph: "e.g 90",
+    form_chol_ph: "e.g 180",
+    form_uric_ph: "e.g 5.2",
+    
+    login_user_ph: "Enter your username",
+    login_pass_ph: "Enter your password",
+    
+    reg_fname_ph: "John",
+    reg_lname_ph: "Doe",
+    reg_email_ph: "john@example.com",
+    reg_phone_ph: "+62 812-3456-7890",
+    reg_user_ph: "johndoe123",
+    reg_pass_ph: "Create a strong password",
+    reg_cpass_ph: "Repeat your password",
+  },
+  id: {
+    nav_home: "Beranda",
+    nav_health_form: "Formulir",
+    nav_sign_in: "Masuk",
+    nav_login: "Login",
+    nav_register: "Daftar",
+    
+    hero_title_1: "Pesan layanan kesehatan dan",
+    hero_title_2: "darurat",
+    hero_title_3: "sekarang juga.",
+    hero_desc: "Akses layanan kesehatan terintegrasi, jadwalkan janji temu, dan dapatkan bantuan darurat dengan cepat dan mudah langsung dari perangkat Anda melalui platform digital Departemen Kesehatan Jakasampurna.",
+    hero_card_1: "LAYANAN TERINTEGRASI",
+    hero_card_2: "JADWALKAN JANJI TEMU",
+    hero_card_3: "BANTUAN DARURAT",
+    hero_card_sub: "Kesehatan Anda, Disederhanakan.",
+    
+    welcome_title: "Selamat datang kembali, Shann Nainggolan.",
+    welcome_desc: "Berikut adalah pembaruan terbaru untuk pasien pantauan Anda.",
+    
+    stat_weight: "Berat Badan",
+    stat_height: "Tinggi Badan",
+    stat_bp: "Tekanan Darah",
+    stat_bs: "Gula Darah",
+    stat_chol: "Kolesterol",
+    stat_uric: "Asam Urat",
+    stat_stable: "– Stabil",
+    stat_last_measured: "Terakhir diukur: Okt 2023",
+    
+    appt_title: "Janji Temu",
+    appt_view_all: "Lihat Semua",
+    
+    lab_title: "Hasil Lab Terbaru",
+    lab_filter: "Saring",
+    lab_th_test: "Nama Tes",
+    lab_th_date: "Tanggal",
+    lab_th_result: "Hasil",
+    lab_th_status: "Status",
+    lab_status_stable: "Stabil",
+    lab_status_monitor: "Pantau",
+    
+    form_weight_lbl: "Berat Badan",
+    form_height_lbl: "Tinggi Badan",
+    form_bp_lbl: "Tekanan Darah",
+    form_bs_lbl: "Gula Darah",
+    form_chol_lbl: "Kolesterol",
+    form_uric_lbl: "Asam Urat",
+    form_submit: "Kirim",
+    appt_1: "Tinjauan Kardiologi • 10:00 AM",
+    appt_2: "Pemeriksaan Umum • 2:30 PM",
+    lab_test_1: "Panel Lipid",
+    lab_test_2: "Hitung Darah Lengkap",
+    lab_test_3: "Panel Metabolik",
+    lab_date_1: "20 Okt 2023",
+    lab_date_2: "18 Okt 2023",
+    lab_date_3: "15 Okt 2023",
+    lab_res_normal: "Normal",
+    lab_res_elevated: "Sel Darah Putih Agak Tinggi",
+    stat_trend_bs: "4%",
+    stat_trend_chol: "2%",
+    stat_trend_uric: "8%",
+
+    
+    login_title: "Selamat Datang",
+    login_desc: "Silakan masuk ke akun Anda",
+    login_user_lbl: "Nama Pengguna",
+    login_pass_lbl: "Kata Sandi",
+    login_btn: "Masuk",
+    login_no_acc: "Belum punya akun?",
+    login_reg_link: "Daftar di sini",
+    
+    reg_title: "Buat Akun",
+    reg_desc: "Isi formulir di bawah ini untuk mendaftar ke JakaHealth",
+    reg_fname_lbl: "Nama Depan",
+    reg_lname_lbl: "Nama Belakang",
+    reg_email_lbl: "Alamat Email",
+    reg_phone_lbl: "Nomor Telepon",
+    reg_user_lbl: "Nama Pengguna",
+    reg_pass_lbl: "Kata Sandi",
+    reg_cpass_lbl: "Konfirmasi Sandi",
+    reg_btn: "Buat Akun",
+    reg_has_acc: "Sudah punya akun?",
+    reg_log_link: "Masuk di sini",
+    
+    footer_company: "Perusahaan",
+    footer_about_us: "Tentang Kami",
+    footer_careers: "Karir",
+    footer_press: "Pers",
+    footer_resources: "Sumber Daya",
+    footer_documentation: "Dokumentasi",
+    footer_help_center: "Pusat Bantuan",
+    footer_community: "Komunitas",
+    footer_legal: "Legal",
+    footer_privacy_policy: "Kebijakan Privasi",
+    footer_terms_of_service: "Syarat dan Ketentuan",
+    footer_cookie_policy: "Kebijakan Cookie",
+    footer_copyright: `© 1986-${currentYear} GMAHK Jakasampurna. Hak Cipta Dilindungi.`,
+    form_weight_ph: "misal 75",
+    form_height_ph: "misal 180",
+    form_bp_sys_ph: "Sistolik (misal 120)",
+    form_bp_dia_ph: "Diastolik (misal 80)",
+    form_bs_ph: "misal 90",
+    form_chol_ph: "misal 180",
+    form_uric_ph: "misal 5.2",
+    
+    login_user_ph: "Masukkan nama pengguna",
+    login_pass_ph: "Masukkan kata sandi",
+    
+    reg_fname_ph: "Budi",
+    reg_lname_ph: "Santoso",
+    reg_email_ph: "budi@contoh.com",
+    reg_phone_ph: "+62 812-3456-7890",
+    reg_user_ph: "budisantoso123",
+    reg_pass_ph: "Buat kata sandi yang kuat",
+    reg_cpass_ph: "Ulangi kata sandi Anda",
+  }
+};
+
+function setLanguage(lang) {
+  // Store language preference in localStorage
+  localStorage.setItem('preferredLanguage', lang);
+  
+  // Find all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      // If it's an input placeholder, update placeholder instead
+      if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+        element.setAttribute('placeholder', translations[lang][key]);
+      } else {
+        element.innerText = translations[lang][key];
+      }
+    }
+  });
+
+  // Update active state of language toggles
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.getAttribute('data-lang') === lang) {
+      btn.classList.add('text-white');
+      btn.classList.remove('text-gray-500', 'hover:text-gray-700');
+    } else {
+      btn.classList.remove('text-white');
+      btn.classList.add('text-gray-500', 'hover:text-gray-700');
+    }
+  });
+
+  // Animate the slider pill
+  document.querySelectorAll('.lang-slider').forEach(slider => {
+    if (lang === 'en') {
+      slider.style.transform = 'translateX(0)';
+    } else {
+      slider.style.transform = 'translateX(100%)';
+    }
+  });
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  setLanguage(savedLang);
+  
+  // Attach event listeners to all language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.getAttribute('data-lang'));
+    });
+  });
+});
